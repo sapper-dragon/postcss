@@ -1,6 +1,6 @@
 {
   "name": "@sapper-dragon/postcss",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Decorate your Sapper project with PostCSS.",
   "license": "MIT",
   "author": "Robert Hall <langbert@gmail.com> (http://arxpoetica.com/)",
