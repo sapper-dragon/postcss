@@ -45,10 +45,10 @@ You can place a `trimmings.config.js` file in the root of your project to set co
 ```js
 export default {
 	postcss: {
-		watchPath: 'src/trimmings/postcss', // path to watch *.postcss files:
+		import: 'src/trimmings/postcss', // path to watch *.postcss files
 		filename: 'global', // name of file without extension
-		pathMatcher: /\.(postcss|css|scss)$/, // pattern for files to watch:
-		staticPath: 'static/css', // output path:
+		filter: /\.(postcss|css|scss)$/, // pattern for files to watch
+		exportStatic: 'static/css', // output path
 		preImport: 'svelte-pre-imports', // filename without extension for pre-importing postcss vars and mixins
 	},
 	// ... additional settings from other @sapper-dragon packages...
