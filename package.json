@@ -1,0 +1,43 @@
+{
+  "name": "@sapper-dragon/postcss",
+  "version": "0.0.4",
+  "description": "Decorate your Sapper project with PostCSS.",
+  "license": "MIT",
+  "author": "Robert Hall <langbert@gmail.com> (http://arxpoetica.com/)",
+  "homepage": "https://github.com/sapper-dragon/postcss#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sapper-dragon/postcss.git"
+  },
+  "keywords": [
+    "sapper",
+    "postcss",
+    "css"
+  ],
+  "bugs": {
+    "url": "https://github.com/sapper-dragon/postcss/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ansi-colors": "3.2.4",
+    "postcss": "7.0.16",
+    "postcss-cli": "6.1.2",
+    "postcss-custom-media": "7.0.8",
+    "postcss-easy-import": "3.0.0",
+    "postcss-functions": "3.0.0",
+    "postcss-global-nested": "1.2.0",
+    "postcss-hexrgba": "1.0.1",
+    "postcss-math": "0.0.10",
+    "postcss-media-minmax": "4.0.0",
+    "postcss-nested": "4.1.2",
+    "postcss-reporter": "6.0.1",
+    "postcss-scss": "2.0.0",
+    "postcss-simple-vars": "5.0.2",
+    "postcss-strip-inline-comments": "0.1.5",
+    "tinycolor2": "1.4.1"
+  },
+  "devDependencies": {}
+}
