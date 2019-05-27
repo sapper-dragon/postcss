@@ -21,7 +21,7 @@ This project requires the [@sapper-dragon/trimmings](https://github.com/sapper-d
 This package includes a PostCSS preprocessor. To use it, import it in your `rollup.config.js` file, and add it as a preproccesor like so:
 
 ```js
-import { preprocess } from '@sapper-dragon/trimmings/postcss'
+import { preprocess } from '@sapper-dragon/postcss/tools'
 // ... 
 	plugins: [
 		// ...
