@@ -4,7 +4,7 @@ module.exports.getPlugins = config => {
 
 	return [
 		require('postcss-easy-import')({
-			path: [config.postcss.import, 'router'],
+			path: [config.postcss.input, 'router'],
 			extensions: ['.css', '.scss', '.postcss'],
 			prefix: '_',
 		}),

@@ -6,8 +6,8 @@ import { getPlugins } from './plugins'
 
 export const change = async({ config }) => {
 	try {
-		const from = `${config.postcss.import}/${config.postcss.filename}.postcss`
-		const to = `${config.postcss.exportStatic}/${config.postcss.filename}.css`
+		const from = `${config.postcss.input}/${config.postcss.filename}.postcss`
+		const to = `${config.postcss.outputStatic}/${config.postcss.filename}.css`
 		const content = await readFile(from)
 		const result = await postcss(getPlugins(config)).process(content, {
 			from,

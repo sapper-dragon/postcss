@@ -14,7 +14,7 @@ yarn add @sapper-dragon/postcss --dev
 
 ## Usage
 
-This project requires the [@sapper-dragon/trimmings](https://github.com/sapper-dragon/trimmings) lib, so look there first for first instructions, then come back. 💫
+This project requires the [@sapper-dragon/trimmings](https://github.com/sapper-dragon/trimmings) lib, so look there first for instructions, then come back. 💫
 
 ### Svelte Preprocessor
 
@@ -36,7 +36,7 @@ NOTE: this preprocessor expects to find a file at `./src/trimmings/postcss/svelt
 
 ### Global file
 
-`@sapper-dragon/postcss` will also convert a `global.postcss` files from a `postcss` folder and export it to the `static/css` folder as `global.css`.
+`@sapper-dragon/postcss` will also convert a `global.postcss` files from a `postcss` folder and output it to the `static/css` folder as `global.css`.
 
 ### Config
 
@@ -45,10 +45,10 @@ You can place a `trimmings.config.js` file in the root of your project to set co
 ```js
 export default {
 	postcss: {
-		import: 'src/trimmings/postcss', // path to watch *.postcss files
+		input: 'src/trimmings/postcss', // path to watch *.postcss files
 		filename: 'global', // name of file without extension
 		filter: /\.(postcss|css|scss)$/, // pattern for files to watch
-		exportStatic: 'static/css', // output path
+		outputStatic: 'static/css', // output path
 		preImport: 'svelte-pre-imports', // filename without extension for pre-importing postcss vars and mixins
 	},
 	// ... additional settings from other @sapper-dragon packages...
