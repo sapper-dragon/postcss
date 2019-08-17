@@ -22,13 +22,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "ansi-colors": "3.2.4",
-    "postcss": "7.0.16",
+    "ansi-colors": "4.1.1",
+    "postcss": "7.0.17",
     "postcss-custom-media": "7.0.8",
     "postcss-easy-import": "3.0.0",
     "postcss-functions": "3.0.0",
     "postcss-global-nested": "1.2.0",
-    "postcss-hexrgba": "1.0.1",
+    "postcss-hexrgba": "1.0.2",
     "postcss-math": "0.0.10",
     "postcss-media-minmax": "4.0.0",
     "postcss-nested": "4.1.2",
