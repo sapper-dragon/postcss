@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "ansi-colors": "4.1.1",
+    "dotenv": "8.2.0",
     "postcss": "7.0.17",
     "postcss-custom-media": "7.0.8",
     "postcss-easy-import": "3.0.0",

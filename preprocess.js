@@ -1,14 +1,27 @@
 const { red } = require('ansi-colors')
 const postcss = require('postcss')
 const postcssScssSyntax = require('postcss-scss')
-
 const { loadConfig } = require('../trimmings/config')
-const config = loadConfig()
-
 const { getPlugins } = require('./plugins')
-const plugins = getPlugins(config)
+
+let config_loaded = false
+let config
+let plugins
+
+module.exports.set_env_path = function(path) {
+	if (!config_loaded) {
+		require('dotenv').config({ path })
+		config = loadConfig()
+		plugins = getPlugins(config)
+	}
+}
 
 module.exports.sveltePreprocess = function(/* domain */) {
+	if (!config_loaded) {
+		config = loadConfig()
+		plugins = getPlugins(config)
+	}
+
 	// NOTE: `domain` is useful for debugging if it is SSR or DOM
 	return {
 		style: async({ content, attributes, filename }) => {
