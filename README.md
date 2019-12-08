@@ -54,3 +54,5 @@ export default {
 	// ... additional settings from other @sapper-dragon packages...
 }
 ```
+
+If `preImport` is set to `false`, no file will be prepended to the compile.

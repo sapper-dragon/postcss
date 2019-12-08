@@ -29,8 +29,8 @@ module.exports.sveltePreprocess = function(/* domain */) {
 				return { code: content/* , map: '' */ }
 			}
 			try {
-				// TODO: check if variables file exists OR make it a standard shared file of some kind
-				const result = await postcss(plugins).process(`@import '${config.postcss.preImport}';\n` + content, {
+				const preImport = config.postcss.preImport ? `@import '${config.postcss.preImport}';\n` : ''
+				const result = await postcss(plugins).process(preImport + content, {
 					from: 'src',
 					syntax: postcssScssSyntax,
 					// TODO: unclear if maps are needed. ASK in the forum
@@ -46,9 +46,15 @@ module.exports.sveltePreprocess = function(/* domain */) {
 				}
 
 			} catch (error) {
-				console.log(red('Error: something went wrong'))
+				console.log(red('Error:'))
 				console.log(error)
-				return { code: ''/* , map: '' */ }
+				console.log()
+				console.log(red('Something is wrong with the PostCSS precompile.'))
+				console.log('Check your `trimmings.config.js` file. The current settings are:\n')
+				console.log(JSON.stringify(config.postcss, null, '  '))
+				console.log()
+				// process.exit(0)
+				// return { code: ''/* , map: '' */ }
 			}
 		},
 	}
