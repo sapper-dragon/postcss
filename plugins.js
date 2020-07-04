@@ -8,6 +8,7 @@ module.exports.getPlugins = config => {
 			extensions: ['.css', '.scss', '.postcss'],
 			prefix: '_',
 		}),
+		require('postcss-mixins'),
 		require('postcss-simple-vars'),
 		require('postcss-functions')({
 			functions: {
