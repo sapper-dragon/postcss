@@ -17,9 +17,9 @@ export const change = async({ config }) => {
 		})
 		// console.log(result.css)
 		// console.log(result.map)
-		await writeFile(to, result.css)
+		await writeFile(to, result.css.toString())
 		if (result.map) {
-			await writeFile(`${to}.map`, result.map)
+			await writeFile(`${to}.map`, result.map.toString())
 		}
 		await refresh()
 		console.log('~>', cyan('Finished converting global.postcss to global.css'))
